@@ -11,13 +11,13 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-// app.use(
-// cors({
-// origin: ["https://finance-falcon-api.vercel.app"],
-// methods: ["POST", "GET", "DELETE", "PUT"],
-// credentials: true,
-// })s
-//);
+app.use(
+  cors({
+    origin: ["https://finance-falcon-api.vercel.app"],
+    methods: ["POST", "GET", "DELETE", "PUT"],
+    credentials: true,
+  })
+);
 
 // ROUTER
 app.use("/financial-records", formRouter);
@@ -26,7 +26,9 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 // ! Connect to mongoose
-mongoose.connect(process.env.DB);
+mongoose.connect(
+  "mongodb+srv://rusuemanuelwebdeveloper:B5Tjl9yWyx5F0BXE@financetracker.i9hhilk.mongodb.net/"
+);
 mongoose.connection
   .on("error", console.error)
   .on("open", () => console.log(`Conntected to MongoDB `));
