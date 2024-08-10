@@ -24,7 +24,7 @@ To run the frontend on your own setup, you'll need to configure environment vari
    ```bash
    cp .env.example .env
    ```
-   ### 3.Run the server
+### 3.Run the server
 
    ```bash
    node.index.js
