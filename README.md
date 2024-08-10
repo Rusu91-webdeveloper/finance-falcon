@@ -50,5 +50,16 @@ Ensure you have the following installed:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/finance-falcon.git
+   git clone https://github.com/Rusu91-webdeveloper/finance-falcon.git
    cd finance-falcon
+
+2. **Connect to the BackEnd**
+    ```
+   cd server
+    npm i
+    node index.js
+2. **Connect to the FrontEnd**
+    ```
+   cd client
+   npm i
+   npm run dev
