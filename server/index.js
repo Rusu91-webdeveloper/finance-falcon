@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 app.use(
   cors({
-    origin: ["https://finance-falcon-api.vercel.app"],
+    origin: ["https://finance-falcon.vercel.app"],
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true,
   })
