@@ -19,7 +19,7 @@ First, ensure you have all the required dependencies installed. From the `client
 
 ```bash
 npm install
-
+```
 ### 2. Environment Variables
 
 To run the frontend on your own setup, you'll need to configure environment variables. We've provided an `.env.example` file in the `client` directory that outlines the necessary variables.
