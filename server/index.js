@@ -10,14 +10,15 @@ const port = process.env.PORT || 6004;
 const app = express();
 
 app.use(express.json());
-// app.use(cors());
-app.use(
-  cors({
-    origin: ["https://finance-falcon-client.vercel.app"],
-    methods: ["POST", "GET", "DELETE", "PUT"],
-    credentials: true,
-  })
-);
+app.use(cors());
+// app.use(
+//   cors({
+//     // The client DOMAIN
+//     origin: ["https://finance-falcon-client.vercel.app"],
+//     methods: ["POST", "GET", "DELETE", "PUT"],
+//     credentials: true,
+//   })
+// );
 
 // ROUTER
 app.use("/financial-records", formRouter);
