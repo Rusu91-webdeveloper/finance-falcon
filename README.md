@@ -63,3 +63,5 @@ Ensure you have the following installed:
    cd client
    npm i
    npm run dev
+
+## Happy tracking! 🦅💵
