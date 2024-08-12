@@ -11,7 +11,7 @@ export const RecordContextProvider = ({ children }) => {
   const fetchRecords = async () => {
     if (!user) return;
     const response = await fetch(
-      `https://finance-falcon.vercel.app/financial-records/getAllByUserID/${user.id}`
+      `https://finance-falcon.vercel.app/dashboard/financial-records/getAllByUserID/${user.id}`
       // `http://localhost:6004/financial-records/getAllByUserID/${user.id}`
     );
     if (response.ok) {
