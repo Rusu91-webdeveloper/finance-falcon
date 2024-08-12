@@ -22,6 +22,9 @@ app.use(cors());
 
 // ROUTER
 app.use("/financial-records", formRouter);
+app.use("/test", (req, res) => {
+  res.send("The Test server is working");
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
