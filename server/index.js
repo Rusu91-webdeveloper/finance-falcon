@@ -28,7 +28,7 @@ app.listen(port, () => {
 });
 // ! Connect to mongoose
 mongoose.connect(
-  "mongodb+srv://rusuemanuelwebdeveloper:B5Tjl9yWyx5F0BXE@financetracker.i9hhilk.mongodb.net/"
+  process.env.DB
 );
 mongoose.connection
   .on("error", console.error)
