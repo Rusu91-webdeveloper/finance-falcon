@@ -11,8 +11,8 @@ export const RecordContextProvider = ({ children }) => {
   const fetchRecords = async () => {
     if (!user) return;
     const response = await fetch(
-      `https://finance-falcon-client.vercel.app/financial-records/getAllByUserID/${user.id}`
-      // `http://localhost:6004/financial-records/getAllByUserID/${user.id}`
+      // `https://finance-falcon-client.vercel.app/financial-records/getAllByUserID/${user.id}`
+      `http://localhost:6004/financial-records/getAllByUserID/${user.id}`
     );
     if (response.ok) {
       const records = await response.json();
@@ -28,8 +28,8 @@ export const RecordContextProvider = ({ children }) => {
   // ! addRecords is  adding (POST request) the Records to the MongoDb Database by updating the records
   const addRecord = async (record) => {
     const response = await fetch(
-      "https://finance-falcon-client.vercel.app/financial-records",
-      // "http://localhost:6004/financial-records",
+      // "https://finance-falcon-client.vercel.app/financial-records",
+      "http://localhost:6004/financial-records",
       {
         method: "POST",
         body: JSON.stringify(record),
@@ -52,8 +52,8 @@ export const RecordContextProvider = ({ children }) => {
   // ! It updates the record taking 2 parameters (The unique identifier of the record and newRecord - the new data for the record that will replace existing data)
   const updateRecord = async (id, newRecord) => {
     const response = await fetch(
-      `https://finance-falcon-client.vercel.app/financial-records/${id}`,
-      // `http://localhost:6004/financial-records/${id}`,
+      // `https://finance-falcon-client.vercel.app/financial-records/${id}`,
+      `http://localhost:6004/financial-records/${id}`,
       {
         method: "PUT",
         body: JSON.stringify(newRecord),
@@ -84,8 +84,8 @@ export const RecordContextProvider = ({ children }) => {
   const deleteRecord = async (id) => {
     try {
       const response = await fetch(
-        `https://finance-falcon-client.vercel.app/financial-records/${id}`,
-        // `http://localhost:6004/financial-records/${id}`,
+        // `https://finance-falcon-client.vercel.app/financial-records/${id}`,
+        `http://localhost:6004/financial-records/${id}`,
         {
           method: "DELETE",
         }

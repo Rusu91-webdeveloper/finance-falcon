@@ -1,4 +1,3 @@
-import Transactions from "./transactions/Transactions";
 import NewIncome from "../../components/NewIncome";
 import Summary from "../../components/Summary";
 
