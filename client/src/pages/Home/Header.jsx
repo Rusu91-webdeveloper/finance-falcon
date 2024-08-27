@@ -7,7 +7,7 @@ const Header = () => {
         <div className="md:block  hidden ">
           <img
             className="rounded-full md:w-32 md:h-32 lg:w-60 lg:h-60"
-            src="../../public/logo2.jpg"
+            src="/logo2.jpg"
             alt=""
           />
         </div>
