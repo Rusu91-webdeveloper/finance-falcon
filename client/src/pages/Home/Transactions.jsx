@@ -9,7 +9,7 @@ const Transactions = () => {
           transactions and transaction templates will help you to speed up the
           insertion of new transactions
         </p>
-        <img src="../../../public/transactions2.png" alt="transactions" />
+        <img src="/transactions2.png" alt="transactions" />
       </div>
     </div>
   );
