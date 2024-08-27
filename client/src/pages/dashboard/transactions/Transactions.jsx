@@ -6,16 +6,16 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import FinancialRecordForm from "../../../components/FinancialRecordForm";
 
-import car from "src/assets/car.svg";
-import house from "src/assets/house.svg";
-import rent from "src/assets/rent.svg";
-import food from "src/assets/food.svg";
-import utilities from "src/assets/utilities.svg";
-import salary from "src/assets/salary.svg";
-import entertainment from "src/assets/entertainment.svg";
-import coffee from "src/assets/coffe.svg";
-import clothing from "src/assets/clothing.svg";
-import restaurant from "src/assets/restaurant.svg";
+import car from "@/assets/car.svg";
+import house from "@/assets/house.svg";
+import rent from "@/assets/rent.svg";
+import food from "@/assets/food.svg";
+import utilities from "@/assets/utilities.svg";
+import salary from "@/assets/salary.svg";
+import entertainment from "@/assets/entertainment.svg";
+import coffee from "@/assets/coffe.svg";
+import clothing from "@/assets/clothing.svg";
+import restaurant from "@/assets/restaurant.svg";
 
 const Transactions = () => {
   const { deleteRecord, records } = useFinancialRecords();
