@@ -12,7 +12,7 @@ const Overview = () => {
             last days together with the accounts, cards and budgets you use most
             frequently.
           </p>
-          <img src="../../../public/overview2.png" alt="overview image" />
+          <img src="/overview2.png" alt="overview image" />
         </div>
       </div>
     </div>
