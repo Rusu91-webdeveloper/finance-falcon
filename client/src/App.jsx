@@ -6,6 +6,7 @@ import Overview from "./pages/dashboard/Overview";
 import Transactions from "./pages/dashboard/transactions/Transactions";
 
 import CalendarComponent from "./pages/dashboard/calendar/Calendar";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route index element={<Overview />} />
           <Route path="transactions" element={<Transactions />} />
           <Route path="calendar" element={<CalendarComponent />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </div>

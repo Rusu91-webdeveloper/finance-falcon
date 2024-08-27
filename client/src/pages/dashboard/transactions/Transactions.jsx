@@ -72,7 +72,7 @@ const Transactions = () => {
           <span
             className={`${
               total.toFixed(2) > 0 ? "text-green-500" : "text-red-600"
-            }`}
+            } ml-4`}
           >
             {total.toFixed(2)} €
           </span>

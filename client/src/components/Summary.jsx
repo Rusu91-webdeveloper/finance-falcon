@@ -15,8 +15,6 @@ const Summary = () => {
     .map((record) => record.amount)
     .reduce((acc, val) => acc + val, 0);
 
-  console.log(total);
-
   return (
     <div className="border border-gray-400 rounded-2xl p-4 max-h-56 col-span-12 md:col-span-6 xl:col-span-3 mb-8 w-full ">
       <div className="flex flex-col space-y-2">

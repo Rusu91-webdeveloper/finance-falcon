@@ -5,9 +5,6 @@ import { useFinancialRecords } from "../../../context/financial-record-context";
 const CalendarWithTodos = () => {
   const { records } = useFinancialRecords();
 
-  // Log records to ensure they are being fetched correctly
-  console.log("Records:", records);
-
   // Extract day, month, and amount from each record
   const recordDayMonth = records.map((record) => {
     const date = new Date(record.date);
@@ -17,9 +14,6 @@ const CalendarWithTodos = () => {
       amount: record.amount,
     };
   });
-
-  // Log the extracted day-month data
-  console.log("Record Day Month:", recordDayMonth);
 
   // Create a dynamic schedule object to accumulate amounts
   const dynamicSchedule = {};

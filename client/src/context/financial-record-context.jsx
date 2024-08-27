@@ -11,7 +11,6 @@ export const RecordContextProvider = ({ children }) => {
   const fetchRecords = async () => {
     if (!user) return;
     const response = await fetch(
-      // `https://finance-falcon-client.vercel.app/financial-records/getAllByUserID/${user.id}`
       `https://finance-falcon.onrender.com/financial-records/getAllByUserID/${user.id}`
     );
     if (response.ok) {
@@ -28,7 +27,6 @@ export const RecordContextProvider = ({ children }) => {
   // ! addRecords is  adding (POST request) the Records to the MongoDb Database by updating the records
   const addRecord = async (record) => {
     const response = await fetch(
-      // "https://finance-falcon-client.vercel.app/financial-records",
       "https://finance-falcon.onrender.com/financial-records",
       {
         method: "POST",
@@ -52,7 +50,6 @@ export const RecordContextProvider = ({ children }) => {
   // ! It updates the record taking 2 parameters (The unique identifier of the record and newRecord - the new data for the record that will replace existing data)
   const updateRecord = async (id, newRecord) => {
     const response = await fetch(
-      // `https://finance-falcon-client.vercel.app/financial-records/${id}`,
       `https://finance-falcon.onrender.com/financial-records/${id}`,
       {
         method: "PUT",
