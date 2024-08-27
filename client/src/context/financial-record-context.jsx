@@ -12,7 +12,7 @@ export const RecordContextProvider = ({ children }) => {
     if (!user) return;
     const response = await fetch(
       // `https://finance-falcon-client.vercel.app/financial-records/getAllByUserID/${user.id}`
-      `http://localhost:6004/financial-records/getAllByUserID/${user.id}`
+      `https://finance-falcon.onrender.com/financial-records/getAllByUserID/${user.id}`
     );
     if (response.ok) {
       const records = await response.json();
@@ -29,7 +29,7 @@ export const RecordContextProvider = ({ children }) => {
   const addRecord = async (record) => {
     const response = await fetch(
       // "https://finance-falcon-client.vercel.app/financial-records",
-      "http://localhost:6004/financial-records",
+      "https://finance-falcon.onrender.com/financial-records",
       {
         method: "POST",
         body: JSON.stringify(record),
@@ -53,7 +53,7 @@ export const RecordContextProvider = ({ children }) => {
   const updateRecord = async (id, newRecord) => {
     const response = await fetch(
       // `https://finance-falcon-client.vercel.app/financial-records/${id}`,
-      `http://localhost:6004/financial-records/${id}`,
+      `https://finance-falcon.onrender.com/financial-records/${id}`,
       {
         method: "PUT",
         body: JSON.stringify(newRecord),
@@ -85,7 +85,7 @@ export const RecordContextProvider = ({ children }) => {
     try {
       const response = await fetch(
         // `https://finance-falcon-client.vercel.app/financial-records/${id}`,
-        `http://localhost:6004/financial-records/${id}`,
+        `https://finance-falcon.onrender.com/financial-records/${id}`,
         {
           method: "DELETE",
         }
